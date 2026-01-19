@@ -21,6 +21,6 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   res.status(500).send({ error: 'An unexpected error occurred' }); // No stack trace leaked
 });
 
-app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+app.listen(Number(port), '0.0.0.0', () => {
+  console.log(`[server]: Server is running at http://0.0.0.0:${port}`);
 });
